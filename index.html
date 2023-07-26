@@ -4,48 +4,241 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fruit Burst</title>
+  
   <!-- Tailwind & daisyui -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
+<!-- google fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
 <style>
-
+    .lato-font{ font-family: 'Lato', sans-serif;}
 </style>
 </head>
 <body>
-    <header>
+    <header class="mt-5 ml-24 mr-24">
         <!-- nav section -->
         <nav>
-            <div class="bg-[#F85559] flex p-4 rounded-full mt-5 mr-32 ml-32 space-x-12">
-              <ul class="flex space-x-8 pt-1 pl-4 text-xl text-white justify-center items-center">
+            <div class="bg-[#F85559] flex p-4 rounded-full mt-5 ml-2 mr-2 space-x-4">
+              <ul class="flex space-x-5 pt-1 pl-4 text-xs text-white justify-center items-center">
                 <li>Home</li>
                 <li>About us</li>
                 <li>Shop</li>
                 <li>All fruits</li>
               </ul>
-              <div class="flex space-x-1 text-3xl items-center">
+              <div class="flex space-x-1 text-3xl items-center justify-center pl-20">
                 <img src="images/logo.png" class="h-8">
                 <h3 class="text-white">Fruit Burst</h3>
               </div>
-              <div class="form-control pl-8">
+              <div class="form-control pl-56">
                 <input type="text" placeholder="Search" class="input input-bordered rounded-full w-72" />
               </div>
             </div>
           </nav>
           
         <!-- banner section -->
-        <section class="bg-cover bg-center py-16 bg-[length:]" style="background-image: url('/images/banner1.png'); ">
-            <div class="container mx-auto">
-              <div class="text-center">
-                <h1 class="text-4xl font-bold text-white">Welcome to our website!</h1>
-                <p class="mt-4 text-lg text-white">Explore our products and services.</p>
-                <button class="btn btn-primary mt-8">Get Started</button>
-              </div>
+        
+        <div class="carousel w-full mt-14 rounded h-[50vh] lg:h-[calc(100vh-167px)]">
+        <div id="slide1" class="carousel-item relative w-full">
+          <div class="bg-[#000000B2] absolute top-0 left-0 w-full h-full"></div>
+          <div class="absolute flex items-center justify-center flex-col w-full h-full text-center space-y-6">
+            <h1 class="text-white text-xl lg:text-4xl font-extrabold">
+              Savor the Natural <span class="text-rose-600">Goodness</span>
+              <br />
+              of Fresh Fruits Online!
+            </h1>
+            <p class="text-base w-3/4 lg:w-full text-white font-medium">
+              We supply highly quality organic products
+            </p>
+            <div>
+              <button class="btn bg-rose-600 border-0 transition-colors text-white hover:text-gray-800">Shop Now</button>
             </div>
-          </section>
+          </div>
+          <img src="./images/banner1.png" class="w-full rounded" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 lg:left-5 left-2 right-2 lg:right-5 top-1/2">
+            <a href="#slide4"
+            class="btn bg-transparent lg:bg-white border-0 lg:border-2 text-2xl rounded-full lg:btn-circle text-rose-500 lg:text-gray-600"
+            >❮</a>
+            <a href="#slide2"
+            class="btn bg-transparent lg:bg-white border-0 lg:border-2 text-2xl rounded-full lg:btn-circle text-rose-500 lg:text-gray-600"
+            >❯</a>
+          </div>
+        </div>
+        <div id="slide2" class="carousel-item relative w-full">
+          <div class="bg-[#000000B2] absolute top-0 left-0 w-full h-full"></div>
+          <div
+            class="absolute flex items-center justify-center flex-col w-full h-full text-center space-y-6">
+            <h1 class="text-white text-xl lg:text-4xl font-extrabold">
+              Savor the Natural <span class="text-rose-600">Goodness</span>
+              <br/>
+              of Fresh Fruits Online!
+            </h1>
+            <p class="text-base w-3/4 lg:w-full text-white font-medium">
+              We supply highly quality organic products
+            </p>
+            <div>
+            <button class="btn bg-rose-600 border-0 transition-colors text-white hover:text-gray-800">Shop Now </button>
+          </div>
+          </div>
+          <img src="./images/banner2.png" class="w-full" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 lg:left-5 left-2 right-2 lg:right-5 top-1/2">
+            <a href="#slide1"
+            class="btn bg-transparent lg:bg-white border-0 lg:border-2 text-2xl rounded-full lg:btn-circle text-rose-500 lg:text-gray-600"
+            >❮</a>
+            <a href="#slide3"
+            class="btn bg-transparent lg:bg-white border-0 lg:border-2 text-2xl rounded-full lg:btn-circle text-rose-500 lg:text-gray-600"
+            >❯</a>      
+          </div>
+        </div>
+        <div id="slide3" class="carousel-item relative w-full">
+          <div class="bg-[#000000B2] absolute top-0 left-0 w-full h-full"></div>
+          <div class="absolute flex items-center justify-center flex-col w-full h-full text-center space-y-6">
+            <h1 class="text-white text-xl lg:text-4xl font-extrabold">
+              Savor the Natural <span class="text-rose-600">Goodness</span>
+              <br />
+              of Fresh Fruits Online!
+            </h1>
+            <p class="text-base w-3/4 lg:w-full text-white font-medium">
+              We supply highly quality organic products
+            </p>
+            <div>
+              <button
+                class="btn bg-rose-600 border-0 transition-colors text-white hover:text-gray-800">Shop Now
+              </button>
+            </div>
+          </div>
+          <img src="./images/banner3.png" class="w-full" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 lg:left-5 left-2 right-2 lg:right-5 top-1/2">
+            <a href="#slide2"
+            class="btn bg-transparent lg:bg-white border-0 lg:border-2 text-2xl rounded-full lg:btn-circle text-rose-500 lg:text-gray-600"
+            >❮</a>
+            <a href="#slide4"
+            class="btn bg-transparent lg:bg-white border-0 lg:border-2 text-2xl rounded-full lg:btn-circle text-rose-500 lg:text-gray-600"
+            >❯</a>
+          </div>
+        </div>
+        <div id="slide4" class="carousel-item relative w-full">
+          <div class="bg-[#000000B2] absolute top-0 left-0 w-full h-full"></div>
+          <div class="absolute flex items-center justify-center flex-col w-full h-full text-center space-y-6">
+            <h1 class="text-white text-xl lg:text-4xl font-extrabold">
+              Savor the Natural <span class="text-rose-600">Goodness</span>
+              <br />
+              of Fresh Fruits Online!
+            </h1>
+            <p class="text-base w-3/4 lg:w-full text-white font-medium">
+              We supply highly quality organic products
+            </p>
+            <div>
+              <button
+                class="btn bg-rose-600 border-0 transition-colors text-white hover:text-gray-800">Shop Now
+              </button>
+            </div>
+          </div>
+          <img src="./images/banner4.png" class="w-full" />
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 lg:left-5 left-2 right-2 lg:right-5 top-1/2">
+        <a href="href="#slide3"
+        class="btn bg-transparent lg:bg-white border-0 lg:border-2 text-2xl rounded-full lg:btn-circle text-rose-500 lg:text-gray-600"
+        >❮</a>
+            
+            <a href="#slide1"
+            class="btn bg-transparent lg:bg-white border-0 lg:border-2 text-2xl rounded-full lg:btn-circle text-rose-500 lg:text-gray-600"
+            >❯</a>
+            
+          </div>
+        </div>
+      </div>
+  <!-- banner section End-->
           
           
     </header>
-    <main>
+    <main class="">
+      <!-- Deal of the day -->
+      <section>
+        <div class="flex space-x-56 mt-12">
+          <div class="pl-24">
+            <h3 class="text-2xl font-bold lato-font">Deal of the day</h3>
+            <p class="lato-font text-xs pt-2 w-96">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+          </div>
+          <div class="flex gap-5">
+            <div>
+              <span class="countdown font-mono text-4xl">
+                <span style="--value:15;"></span>
+              </span>
+              days
+            </div> 
+            <div>
+              <span class="countdown font-mono text-4xl">
+                <span style="--value:10;"></span>
+              </span>
+              hours
+            </div> 
+            <div>
+              <span class="countdown font-mono text-4xl">
+                <span style="--value:24;"></span>
+              </span>
+              min
+            </div> 
+            <div>
+              <span class="countdown font-mono text-4xl">
+                <span style="--value:45;"></span>
+              </span>
+              sec
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="flex mt-5 ml-24 mr-24 justify-center space-x-3">
+        <div class="card w-64 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="./images/fruit6.png"  class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">12.90$ - 18.85$</h2>
+            <p>Apples</p>
+            <div class="card-actions">
+              <button class="btn btn-primary">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="card w-64 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="./images/fruit7.png" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">12.90$ - 18.85$</h2>
+            <p>Orange</p>
+            <div class="card-actions">
+              <button class="btn btn-primary">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="card w-64 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="./images/fruit8.png" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">12.90$ - 18.85$</h2>
+            <p>Red Dragon</p>
+            <div class="card-actions">
+              <button class="btn btn-primary">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="card w-64 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="./images/fruit9.png" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">12.90$ - 18.85$</h2>
+            <p>Banana</p>
+            <div class="card-actions">
+              <button class="btn btn-primary">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </section>
 
     </main>
 
